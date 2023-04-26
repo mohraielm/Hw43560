@@ -7,7 +7,7 @@ public class Schedule {
      * @param taskType Type of task being created
      * @return verify if task is created
      */
-    public boolean createTask(String taskName, String taskType){
+    public static boolean createTask(String taskName, String taskType){
         boolean created = true;
 
         //placeholder if-else statement
@@ -22,7 +22,7 @@ public class Schedule {
     /**
      * @param taskName Name of the task being viewed
      */
-    public void viewTask(String taskName){
+    public static void viewTask(String taskName){
 
     }
 
@@ -30,7 +30,7 @@ public class Schedule {
      * @param taskName Name of task being deleted
      * @return verify if task is deleted
      */
-    public boolean deleteTask(String taskName){
+    public static boolean deleteTask(String taskName){
         boolean deleted = true;
 
         if(deleted){
@@ -44,7 +44,7 @@ public class Schedule {
      * @param taskName Name of task being editted
      * @return verify if task is editted
      */
-    public boolean editTask(String taskName){
+    public static boolean editTask(String taskName){
         boolean edited = true;
 
         if(edited){
@@ -52,6 +52,11 @@ public class Schedule {
         }else{
             return false;
         }
+    }
+
+    public static void main(String[] args){
+        boolean test = editTask("Hello");
+        System.out.println(test);
     }
 
 }
